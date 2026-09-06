@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ZKTecoGatway.csproj" />
+  <Project Path="ZKTecoGatway.Tests\ZKTecoGatway.Tests.csproj" />
+</Solution>
