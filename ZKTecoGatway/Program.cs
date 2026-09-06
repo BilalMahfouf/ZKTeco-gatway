@@ -15,10 +15,11 @@ builder.Services.AddScoped<ZKTecoAttendanceMachineReader>();
 Env.Load(Path.Combine(AppContext.BaseDirectory, ".env"));
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8000";
+var baseUrl =Environment.GetEnvironmentVariable("BASE_URL") ?? "localhost" ;
 
 builder.Services.AddCarter();
 builder.WebHost.UseUrls(
-    $"http://0.0.0.0:{port}"
+    $"{baseUrl}:{port}"
 );
 var app = builder.Build();
 
